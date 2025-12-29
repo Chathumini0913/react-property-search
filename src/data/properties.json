@@ -1,0 +1,115 @@
+{
+	"properties": [
+        {
+            "id":"prop1",
+			"type":"House",
+            "bedrooms":3,
+			"price":750000,
+			"tenure":"Freehold",
+			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+			"location":"Petts Wood Road, Petts Wood, Orpington BR5",
+			"picture":"images/prop1pic1small.jpg",
+			"url":"properties/prop1.html",
+            "added": {
+                "month":"October",
+                "day":12,
+                "year":2022
+            }
+        },
+		{
+            "id":"prop2",
+			"type":"Flat",
+            "bedrooms":2,
+			"price":399995,
+			"tenure":"Freehold",
+			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
+			"location":"Crofton Road Orpington BR6",
+			"picture":"images/prop2pic1small.jpg",
+			"url":"properties/prop2.html",
+            "added": {
+                "month":"September",
+                "day":14,
+                "year":2022
+            }
+        },
+        {
+            "id":"prop3",
+			"type":"House",
+            "bedrooms":3,
+			"price":620000,
+			"tenure":"Freehold",
+            "description":"Presented in immaculate condition throughout is this spacious three bedroom, two bathroom semi-detached family home. <br>The ground floor features a bright open-plan living and dining area with solid wood flooring, leading into a modern fitted kitchen with intergrated appliances including an oven, hob, fridge freezer, and washing machine. Double doors open out onto a well-maintained private rear garden, ideal forentertaining. Uptairs offers three generously sized bedrooms, including a master bedroom with en-suite shower room, along with a contemporary family bathroom fitted a three-piece suite. Additional benefits include double glazing, gas central heating, and off-street parking. ",
+			"location":"Oakwood Drive Broomley BR2",
+			"picture":"images/prop4pic1small.jpg",
+			"url":"properties/prop4.html",
+            "added": {
+                "month":"March",
+                "day": 8,
+                "year":2023
+            }
+        },
+        {
+            "id":"prop4",
+			"type":"House",
+            "bedrooms":4,
+			"price":920000,
+			"tenure":"Freehold",
+            "description": "Offered in excellent decorative order is this well-proportioned four bedroom detached house, perfect for growing families. <br>The property boasts a spacious reception room with large windows allowing ample natural light, alongside a seperate dining room and a fully fitted modern kitchen with intergrated appliances. Patio doors lead from the dining area to a landscaped garden. The first floor comprises four bedrooms, including a master with en-suite, and a stylish family bathroom with shower over bath. Further benefits include a garage, driveway parking, and a quiet residential location close to local amenties. ",
+			"location":"Willow Close Beckenham BR3",
+			"picture":"images/prop4pic1small.jpg",
+			"url":"properties/prop4.html",
+            "added": {
+                "month":"July",
+                "day":21,
+                "year":2023
+            }
+        },
+        {
+            "id":"prop5",
+			"type":"House",
+            "bedrooms":3,
+			"price":680000,
+			"tenure":"Freehold",
+            "description": "This beautifully maintained three bedroom terraced house offers modern living arranged over two floors. <br>The ground floor features a welcoming living room with wood-effect flooring, flowing into a contemporary open-plan kitchen and dining area equipped with intergrated appliances. French doors provide direct access to a private rear garden. Upstairs consists of three well-sized bedrooms and a modern family bathroom with a matching three-piece suite. Additional features include central heating, double glazing throughout, and convienient access to nearby schools and transport links.",
+			"location":"Maple Road Croydon CR0",
+			"picture":"images/prop5pic1small.jpg",
+			"url":"properties/prop5.html",
+            "added": {
+                "month":"January",
+                "day": 15,
+                "year":2024
+            }
+        },
+        {
+            "id":"prop6",
+			"type":"House",
+            "bedrooms":5,
+			"price":1250000,
+			"tenure":"Freehold",
+            "description": "A stunning newly refurbished five bedroom detached home finished to a high specification throughout. <br>The property offers an expensive open-plan living space with underflow heating, bi-folding doors opening onto a large landscaped garden, and a sleek modern kitchen with intergrated appliances. The first floor comprises five generously sized bedrooms, including two width en-suite shower rooms, and a luxury family bathroom. Further benefits include a utility room, ampke storage, driveway parking for multiple vehicles, and a peaceful residential setting.",
+			"location":"Kingswood Avenue Chrislehurst BR7",
+			"picture":"images/prop6pic1small.jpg",
+			"url":"properties/prop6.html",
+            "added": {
+                "month":"November",
+                "day": 2,
+                "year":2023
+            }
+        },
+        {
+            "id":"prop7",
+			"type":"House",
+            "bedrooms":3,
+			"price":705000,
+			"tenure":"Freehold",
+            "description": "This charming three bedroom end-of-terrace house is presented in excellent condition and offers spacious accommodation throughout. <br>The ground floor includes a bright living room, a seperate dining are, and a fully fitted kitchen with modern appliances. Access to a private rear garden is privided via the kitchen. The first floor comprises three double bedrooms and a contemporary family bedroom with shower attachment over the bath. Additional features include gas central heating, double glazing, and close proximity to local shops, and public transport.",
+			"location":"Elm Street Sidcup DA14",
+			"picture":"images/prop7pic1small.jpg",
+			"url":"properties/prop7.html",
+            "added": {
+                "month":"May",
+                "day": 30,
+                "year":2024
+            }
+        }
+]}
