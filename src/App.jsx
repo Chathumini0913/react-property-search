@@ -1,8 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SearchPage from "./pages/SearchPage";
+import PropertyPage from "./pages/PropertyPage";
+
 function App() {
   return (
-    <div>
-      <h1>Property Search Website</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SearchPage />} />
+        <Route path="/property/:id" element={<PropertyPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
