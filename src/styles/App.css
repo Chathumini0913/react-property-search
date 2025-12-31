@@ -1,19 +1,76 @@
-/*body {
+/* Global */
+*{
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f5f5f5;
-}*/
+    color: #222;
+}
 
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Page Title */
+h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+/* Search Form */
+.search-form {
+    background: white;
+    padding: 16px;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.search-form input,
+.search-form select,
+.search-form button {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.search-form button {
+    background-color: #df2e2e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #b92626;
+}
+/* Search Grid */
 .results-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 16px;
 }
 
+/* Property Grid */
 .property-card {
     background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
     padding: 12px;
     border-radius: 6px;
+}
+
+.property-card:hover {
+    transform: translateY(-3px);
 }
 
 .property-card img {
@@ -21,3 +78,19 @@
     height: 180px;
     object-fit: cover;
 }
+
+/* Card Content */
+.property-card .content {
+    padding: 12px;
+}
+
+.property-card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.property-card p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
