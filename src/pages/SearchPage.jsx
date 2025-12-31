@@ -1,18 +1,24 @@
-import properties from "../data/properties.json";
+import { useState } from "react";
+import data from "../data/properties.json"
+import SearchForm from "../components/SearchForm";
+import PropertyCard from "../components/PropertyCard";
 
 function SearchPage() {
+    const [results, setResults] = useState(data.properties);
+
+    function handleSearch(criteria) {
+        console.log(criteria);
+    }
+
     return (
-    
         <div>
-            <h2>Property Results</h2>
-            
-            {properties.map((property) => (
-                <div key={property.id}>
-                    <h3>£{property.price}</h3>
-                    <p>{property.bedrooms} bedroom {property.type}</p>
-                    <p>{property.location}</p>
-                </div>
-            ))}
+            <SearchForm onSearch={handleSearch} />
+
+            <div className="results-grid">
+                {results.map(property => (
+                    <PropertyCard key={property.id} property={property} />
+                ))}
+            </div>
         </div>
     );
 }

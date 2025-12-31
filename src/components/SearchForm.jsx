@@ -1,6 +1,6 @@
-import Select from "react-select";
+/*import Select from "react-select";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import "react-datepicker/dist/react-datepicker.css";*/
 import { useState } from "react";
 
 function SearchForm({ onSearch }) {
@@ -8,19 +8,40 @@ function SearchForm({ onSearch }) {
     const [minPrice, setMinPrice] = useState("");
     const [maxPrice, setMaxPrice] = useState("");
 
-    const options = [
-        { value: "any", label: "Any" },
-        { value: "house", label: "House" },
-        { value: "flat", label: "Flat"}
-    ];
+    function handleSubmit(e) {
+        e.preventDeafault();
 
-    return (
-        <div>
-            <select options={options} onCharge={setType} />
-            <input type="number" placeholder="Min Price" onCharge={e => setMinPrice(e.target.value)} />
-            <input type="number" placeholder="Max Price" onCharge={e => setMaxPrice(e.target.value)} />
-            <button>Search</button>
-        </div>
+        onSearch({
+            type,
+            minPrice,
+            maxPrice
+        });
+    }
+
+    return ( 
+        <form onSubmit={handleSubmit}>
+            <select value={type} onChange={e => setType(e.target.value)}>
+                <option value="">Any</option>
+                <option value="House">House</option>
+                <option value="Flat">Flat</option>
+            </select>
+
+            <input
+                type="number"
+                placeholder="Min Price"
+                value={minPrice}
+                onCharge={e => setMinPrice(e.target.value)}
+            />
+
+            <input
+                type="number"
+                placeholder="Max Price"
+                value={maxPrice}
+                onCharge={e => setMaxPrice(e.target.value)}
+            />
+
+            <button type="submit">Search</button>
+        </form>
     );
 }
 
