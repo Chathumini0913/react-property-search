@@ -13,6 +13,26 @@ function SearchPage() {
             result = result.filter(p => p.type === filters.type);
         }
 
+        if (filters.minPrice) {
+            result = result.filter(p => p.price >= (filters.minPrice));
+        } 
+
+        if (filters.maxPrice) {
+            result = result.filter(p => p.price >= (filters.maxPrice));
+        }
+
+        if (filters.bedrooms) {
+            result = result.filter(p => p.bedrooms >= (filters.bedrooms));
+        } 
+
+        if (filters.postcode) {
+            result = result.filter(p => 
+                p.postcode.toLowerCase().startsWith(filters.postcode.toLowerCase()) 
+            );
+        }
+
+
+
         setFiltered(result);
     };
 
@@ -23,9 +43,13 @@ function SearchPage() {
             <SearchForm onSearch={handleSearch} />
 
             <div className="results-grid">
-                {filtered.map(property => (
+                {filtered.length === 0 ? (
+                    <p>No properties found.</p>
+                ) : ( 
+                    filtered.map(property => (
                     <PropertyCard key={property.id} property={property} />
-                ))}
+                    ))
+                )}
             </div>
         </div>
     );
