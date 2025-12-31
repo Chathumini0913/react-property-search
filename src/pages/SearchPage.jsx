@@ -1,21 +1,29 @@
 import { useState } from "react";
-import data from "../data/properties.json"
 import SearchForm from "../components/SearchForm";
+import properties from "../data/properties.json";
 import PropertyCard from "../components/PropertyCard";
 
 function SearchPage() {
-    const [results, setResults] = useState(data.properties);
+    const [filtered, setFiltered] = useState(properties.properties);
 
-    function handleSearch(criteria) {
-        console.log(criteria);
-    }
+    const handleSearch = (filters) => {
+        let result = properties.properties;
+
+        if (filters.type !== "any") {
+            result = result.filter(p => p.type === filters.type);
+        }
+
+        setFiltered(result);
+    };
 
     return (
-        <div>
+        <div className="container">
+            <h1>Property Results</h1>
+
             <SearchForm onSearch={handleSearch} />
 
             <div className="results-grid">
-                {results.map(property => (
+                {filtered.map(property => (
                     <PropertyCard key={property.id} property={property} />
                 ))}
             </div>
