@@ -1,20 +1,15 @@
 import { Link } from "react-router-dom";
+import NavMenu from "./NavMenu";
 
 function Header() {
-    return (
-        <header className="navbar">
-            <div className="navebar-container">
-                <Link to="/" className="navbar-logo">PropertyFinder</Link>
-            
-                <nav className="navbar-links">
-                    <Link to="/" className="nav-link">Buy</Link>
-                    <Link to="/" className="nav-link">Rent</Link>
-                    <Link to="/" className="nav-link">Sold Prices</Link> 
-                    <Link to="/" className="nav-link">New Homes</Link>
-                </nav>
-            </div>
-        </header>
-    );
+  return (
+    <header className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">HomeSearch</Link>
+        <NavMenu />
+      </div>
+    </header>
+  );
 }
 
 export default Header;

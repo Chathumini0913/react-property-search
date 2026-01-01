@@ -7,9 +7,9 @@ function SearchPage() {
     const [filtered, setFiltered] = useState(properties.properties);
 
     const handleSearch = (filters) => {
-        let result = properties.properties;
+        let result = [...properties.properties];
 
-        if (filters.type !== "any") {
+        if (filters.type && filters.type !== "any") {
             result = result.filter(p => p.type === filters.type);
         }
 
@@ -18,7 +18,7 @@ function SearchPage() {
         } 
 
         if (filters.maxPrice) {
-            result = result.filter(p => p.price >= (filters.maxPrice));
+            result = result.filter(p => p.price <= (filters.maxPrice));
         }
 
         if (filters.bedrooms) {
@@ -30,8 +30,6 @@ function SearchPage() {
                 p.postcode.toLowerCase().startsWith(filters.postcode.toLowerCase()) 
             );
         }
-
-
 
         setFiltered(result);
     };

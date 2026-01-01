@@ -100,6 +100,12 @@ h1 {
     border-bottom: 1px solid #e0e0e0;
 }
 
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
 .navbar-container {
     max-width: 1200px;
     margin: auto;
@@ -119,6 +125,7 @@ h1 {
 .navbar-links {
     display: flex;
     gap: 24px;
+    align-items: center;
 }
 
 .nav-link {
@@ -132,3 +139,169 @@ h1 {
     color: #00deb6;
 }
 
+.nav-item {
+    position: relative;
+}
+
+.nav-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #262637;
+    cursor: pointer;
+    padding: 6px 0;
+}
+
+.nav-title:hover {
+    color: #00deb6;
+}
+
+.dropdown {
+    position: absolute;
+    top: 160%;
+    left: 50%
+    transform: translateX :(-50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    padding: 20px 24px;
+    display:none;
+    z-index: 1000;
+}
+
+.dropdown.show {
+    display: grid;
+}
+
+.dropdown.mega {
+    min-width: 420px;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 12px 40px;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.dropdown a:hover {
+    color: #00deb6;
+}
+
+.dropdown-item:hover {
+    background: #f4f6f8;
+}
+
+.dropdown.open {
+    display: grid;
+}
+
+.hero {
+    background: #e6f0ff;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.hero-search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-search input {
+    width: 60%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.hero-search button {
+    padding: 14px 26px;
+    background: #00deb6;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+
+
+.search-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+}
+
+.search-form input,
+.search-form select {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.search-form button {
+  padding: 12px;
+  background: #00deb6;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Buy / Rent toggle */
+.buy-rent-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.buy-rent-toggle button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.buy-rent-toggle .active {
+  background: #00deb6;
+  border-color: #00deb6;
+}
+
+.sign-in-btn {
+    padding: 8px 16px;
+    border: 2px solid #00deb6;
+    border-radius: 6px;
+    color: #00deb6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sign-in-btn:hover {
+    background: #00deb6;
+    color: white;
+}
