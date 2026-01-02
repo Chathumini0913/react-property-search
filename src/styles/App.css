@@ -51,6 +51,32 @@ h1 {
 .search-form button:hover {
     background-color: #b92626;
 }
+
+.signin-box {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    max-width : 700px;
+    margin : 40px auto;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.signin-box p {
+    margin: 12px 0 18px;
+    color: #444;
+}
+
+.signin-link {
+    color: #00deb6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signin-link:hover {
+    text-decoration: underline;
+}
+
 /* Search Grid */
 .results-grid {
     display: grid;
@@ -247,6 +273,35 @@ h1 {
     font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.hero-togglev{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.hero-toggle button {
+    padding: 10px 22px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.hero-toggle button.active {
+    background: #00deb6;
+    border-color: #00deb6;
+    color: #fff;
+}
+
+.hero-mode-text {
+    margin: 14px 0 18px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
 }
 
 
