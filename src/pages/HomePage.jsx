@@ -53,14 +53,17 @@ function HomePage() {
       <Hero />
 
       <div className="container">
-        <div className="signal-box">
+        <div className="signin-box">
             <strong>Sign in to streamline your search</strong>
             <p>
                 Save properties, create alerts and keep track of the enquiries you send to agents.
             </p>
-            <a href="/signin" className="signin-link">
+            <button 
+                className="signin-btn"
+                onClick={() => navigate("/signin")}
+            >
                 Sign in or create an account
-            </a>
+            </button>
         </div>
       </div>
     </>

@@ -67,6 +67,19 @@ h1 {
     color: #444;
 }
 
+.signin-box h2 {
+    margin-bottom: 20px;
+}
+
+.signin-box input {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+}
+
 .signin-link {
     color: #00deb6;
     font-weight: 600;
@@ -75,6 +88,22 @@ h1 {
 
 .signin-link:hover {
     text-decoration: underline;
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00deb6;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.continue-btn:hover {
+    background: #00c5a2;
 }
 
 /* Search Grid */

@@ -13,7 +13,7 @@ function Hero() {
     };
 
     const handleSearch = () => {
-        const param = new URLSearchParams({
+        const params = new URLSearchParams({
             mode,
             location: query
         }).toString();
