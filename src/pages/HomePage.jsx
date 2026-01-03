@@ -1,51 +1,38 @@
-/*import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Hero from "../components/Hero";
 import SearchForm from "../components/SearchForm";
+import PropertyCard from "../components/PropertyCard";
+import data from "../data/properties.json";
 
 function HomePage() {
-    const navigate = useNavigate();
-
-    const handleSearch = (filters) => {
-        const query = new URLSearchParams(filters).toString();
-        navigate(`/search?${query}`);
-    };
-
-    return (
-        <>
-            <Hero />
-
-            <div className="container">
-                <div className="hero-content">
-                    <h1>Find your perfect home</h1>
-                    <p>Search properties for sale and rent across the UK</p>
-
-                    <SearchForm on Search={handleSearch} />
-                </div>
-            </section>
-
-            <section className="container">
-                <p>
-                    <strong>Sign in to streamline your search</strong><br/>
-                    Save propertiies, create alerts and keep track of the enquiries you send to agents.
-                </p>
-            </section>
-        </>
-    );
-}
-
-export default HomePage; */
-
-
-import { useNavigate } from "react-router-dom";
-import Hero from "../components/Hero";
-import SearchForm from "../components/SearchForm";
-
-function HomePage() {
-  const navigate = useNavigate();
+  const [properties, setProperties] = useState(data.properties);
 
   const handleSearch = (filters) => {
-    const query = new URLSearchParams(filters).toString();
-    navigate(`/search?${query}`);
+    let result = [...data.properties];
+
+    if (filters.type && filters.type !== "any") {
+      result = result.filter(p => p.type === filters.type);
+    }
+
+    if (filters.minPrice) {
+      result = result.filter(p => p.price >= Number(filters.minPrice));
+    }
+
+    if (filters.maxPrice) {
+      result = result.filter(p => p.price <= Number(filters.maxPrice));
+    }
+
+    if (filters.bedrooms) {
+      result = result.filter(p => p.bedrooms >= Number(filters.bedrooms));
+    }
+
+    if (filters.postcode) {
+      result = result.filter(p =>
+        p.location.toLowerCase().includes(filters.postcode.toLowerCase())
+      );
+    }
+
+    setProperties(result);
   };
 
   return (
@@ -53,17 +40,29 @@ function HomePage() {
       <Hero />
 
       <div className="container">
+        {/* Sign-in box */}
         <div className="signin-box">
-            <strong>Sign in to streamline your search</strong>
-            <p>
-                Save properties, create alerts and keep track of the enquiries you send to agents.
-            </p>
-            <button 
-                className="signin-btn"
-                onClick={() => navigate("/signin")}
-            >
-                Sign in or create an account
-            </button>
+          <strong>Sign in to streamline your search</strong>
+          <p>
+            Save properties, create alerts and keep track of enquiries.
+          </p>
+          <button className="continue-btn">
+            Sign in or create an account
+          </button>
+        </div>
+
+        {/* Search Form */}
+        <SearchForm onSearch={handleSearch} />
+
+        {/* Property Results */}
+        <div className="results-grid">
+          {properties.length === 0 ? (
+            <p>No properties found.</p>
+          ) : (
+            properties.map(property => (
+              <PropertyCard key={property.id} property={property} />
+            ))
+          )}
         </div>
       </div>
     </>
@@ -71,3 +70,4 @@ function HomePage() {
 }
 
 export default HomePage;
+

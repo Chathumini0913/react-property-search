@@ -213,8 +213,8 @@ h1 {
 .dropdown {
     position: absolute;
     top: 160%;
-    left: 50%
-    transform: translateX :(-50%);
+    left: 50%;
+    transform: translateX (-50%);
     background: white;
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
@@ -304,7 +304,7 @@ h1 {
     border-radius: 4px;
 }
 
-.hero-togglev{
+.hero-toggle{
     display: flex;
     justify-content: center;
     gap: 12px;

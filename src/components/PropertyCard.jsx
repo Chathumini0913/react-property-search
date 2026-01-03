@@ -1,14 +1,17 @@
-import { Link } from "react-router-dom";
+import  { Link } from "react-router-dom";
 
 function PropertyCard({ property }) {
     return (
-        <Link to={`/property/${property.id}`} className="card">
-            <img src={property.image} alt="property" />
-            <div className="card-body">
+        <Link to={`/property/${property.id}`} className="property-card">
+            <img src={property.picture[0]} alt={property.shortDescription} />
+
+            <div className="content">
                 <h3>£{property.price.toLocaleString()}</h3>
-                <p>{property.bedrooms} bedroom</p>
-                <p>{property.type}</p>
-                <p>{property.postcode}</p>
+                <p>{property.shortDescription}</p>
+                <p>
+                    {property.bedrooms} bedroom {property.type}
+                </p>
+                <p>{property.location}</p>
             </div>
         </Link>
     );
