@@ -360,24 +360,6 @@ h1 {
   font-weight: bold;
 }
 
-/* Buy / Rent toggle */
-/*.buy-rent-toggle {
-  display: flex;
-  gap: 10px;
-}
-
-.buy-rent-toggle button {
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  background: white;
-  cursor: pointer;
-}
-
-.buy-rent-toggle .active {
-  background: #00deb6;
-  border-color: #00deb6;
-}*/
-
 .sign-in-btn {
     padding: 8px 16px;
     border: 2px solid #00deb6;
@@ -405,4 +387,65 @@ h1 {
     height: 190px;
     object-fit: cover;
     border-radius: 8px;
+} 
+
+
+.footer {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+  text-align: center;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column:first-child {
+    text-align: left;
+} 
+
+.footer-column:nth-child(2) {
+    justify-self: center ;
+    transform: translate(-30px);
+}
+
+.footer-column:nth-child(3) {
+    justify-self: center;
+    transform: translateX(45px);
+}
+
+.footer-column:last-child {
+  text-align: right;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
 }
