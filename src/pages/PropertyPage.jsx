@@ -15,13 +15,12 @@ function PropertyPage() {
             <h2>{property.location}</h2>
 
             {/* Image gallery */}
-            <div className="result-grid">
+            <div className="property-gallery">
                 {property.picture.map((img, index) => (
                     <img 
                         key={index}
                         src={img}
                         alt={`Property ${index +1}`}
-                        style={{ width: "100%", borderRadius: "6px" }}
                     />
                 ))}
             </div>

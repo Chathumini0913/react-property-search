@@ -25,7 +25,7 @@ function Hero() {
         <section className="hero">
             <div className="hero-content">
                 <h1>Find your happy place</h1>
-                <p>Search propertes for sale and to rent in the UK</p>
+                <p>Search properties for sale and to rent in the UK</p>
 
                 {/* Buy / Rent / Sold buttons*/ }
                 <div className="hero-toggle">
