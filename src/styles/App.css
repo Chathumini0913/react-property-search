@@ -517,3 +517,16 @@ h1 {
     border-color: #00deb6;
 }
 
+.favourites-box {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.favourites-box .property-card {
+    margin-bottom: 10px;
+    cursor: grab;
+}
+
+.favourites-box .property-card img {
+    height: 100px;
+    object-fit: cover;
+}
