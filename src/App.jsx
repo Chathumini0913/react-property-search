@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import SignInPage from "./pages/SignInPage";
 import { FavouritesProvider } from "./context/FavouritesContext";
 
-
 function App() { 
   return (
     <>
