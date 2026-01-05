@@ -43,10 +43,11 @@ function PropertyPage() {
         {/* Tab: Floor Plan */}
         <TabPanel>
           <img
-            src={property.floorPlan}
+            src={process.env.PUBLIC_URL + property.floorPlan}
             alt="Floor Plan"
             className="floorplan-image"
           />
+
         </TabPanel>
 
         {/* Tab: Map using OpenStreetMap */}

@@ -17,8 +17,8 @@ function PropertyGallery({ images }) {
                 {images.map((img, index) => (
                     <img
                         key={index}
-                        src={img}
-                        alt={`Thumbnail 4{index + 1}`}
+                        src={process.env.PUBLIC_URL + img} // prepend PUBLIC_URL
+                        alt={`Thumbnail ${index + 1}`}
                         className={img === mainImage ? "active" : ""}
                         onClick={() => setMainImage(img)}
                     />

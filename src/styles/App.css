@@ -287,7 +287,7 @@ h1 {
 /* Hero section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
-                url("/src/assets/hero.jpg") center/cover no-repeat;
+                url("/public/assets/hero.jpg") center/cover no-repeat;
     padding: 100px 20px;
     min-height: 85vh;
     display: flex;

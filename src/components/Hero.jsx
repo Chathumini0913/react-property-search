@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import heroImg from "../assets/hero.jpg";
 
 // Main search area on homepage
 function Hero() {
