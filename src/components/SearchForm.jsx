@@ -1,6 +1,8 @@
 import { useState } from "react";
 
+// SearchForm components for filtering properties based on user-selected critiria
 function SearchForm({ onSearch }) {
+  // State to track all search filters
   const [filters, setFilters] = useState({
     type: "any",
     minPrice: "",
@@ -12,6 +14,7 @@ function SearchForm({ onSearch }) {
     postcode: "",
   });
 
+  // Submit handler calls parent onSearch with current filters
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(filters);
@@ -21,7 +24,7 @@ function SearchForm({ onSearch }) {
     <form className="rm-search-box" onSubmit={handleSubmit}>
       <h2 className="rm-title">Find property for sale</h2>
 
-      {/* Row 1 */}
+      {/* Row 1 : Property type and date added filters*/}
       <div className="rm-row">
         <div className="rm-field">
           <label>Property type</label>
@@ -53,7 +56,7 @@ function SearchForm({ onSearch }) {
         </div>
       </div>
 
-      {/* Row 2 */}
+      {/* Row 2 : Price range and bedrooms */}
       <div className="rm-row">
         <div className="rm-field">
           <label>Price range (£)</label>
@@ -102,7 +105,7 @@ function SearchForm({ onSearch }) {
         </div>
       </div>
 
-      {/* Row 3 */}
+      {/* Row 3 : Postcode filter and search button */}
       <div className="rm-row rm-bottom">
         <div className="rm-field">
           <label>Postcode area</label>

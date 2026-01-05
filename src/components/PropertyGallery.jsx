@@ -1,6 +1,8 @@
 import { useState } from "react";
 
+// PropertyGallery component displays a main property image with clickable thumbnails
 function PropertyGallery({ images }) {
+    // State to track the currently selected main image
     const [mainImage, setMainImage] = useState(images[0]);
 
     return (
