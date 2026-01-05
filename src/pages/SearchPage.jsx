@@ -6,6 +6,9 @@ import PropertyCard from "../components/PropertyCard";
 import { FavouritesContext } from "../context/FavouritesContext";
 import {useNavigate } from "react-router-dom";
 
+
+//SearchPage displays filterd property results
+// Users can filter using SearchForm and view their favourites
 function SearchPage() {
     const navigate = useNavigate();
     const [filtered, setFiltered] = useState(properties.properties);
@@ -13,6 +16,7 @@ function SearchPage() {
     const { favourites, removeFavourite, clearFavourites } =
         useContext(FavouritesContext); 
 
+    // Apply filters from SearchForm to properties JSON
     const handleSearch = (filters) => {
         let result = [...properties.properties];
 
@@ -71,6 +75,7 @@ function SearchPage() {
 
     return (
         <div className="container">
+            {/* Back to Home button */}
             <button
                 className="back-home-btn"
                 onClick={() => navigate("/")}
@@ -80,6 +85,7 @@ function SearchPage() {
         
             <h1>Property Results</h1>
 
+            {/* Search filter form */}
             <SearchForm onSearch={handleSearch} />
 
             <div

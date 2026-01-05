@@ -6,20 +6,25 @@ import PropertyCard from "../components/PropertyCard";
 import data from "../data/properties.json";
 import { FavouritesContext } from "../context/FavouritesContext";
 
+// HomePage component displays the hero section, search filters, property results, and favourites
 function HomePage() {
-  const [properties, setProperties] = useState(data.properties);
-  const navigate = useNavigate();
+  const [properties, setProperties] = useState(data.properties); // All properties or filtere results
+  const navigate = useNavigate(); // Navigation routing
 
+  // Access favpurites from context
   const { favourites, addFavourite, removeFavourite, clearFavourites } =
     useContext(FavouritesContext);
 
+  // Filter properties based on SearchForm input
   const handleSearch = (filters) => {
     let result = [...data.properties];
 
+    // Filter by property type
     if (filters.type && filters.type !== "any") {
       result = result.filter((p) => p.type === filters.type);
     }
 
+    // Filter by price range 
     if (filters.minPrice) {
       result = result.filter((p) => p.price >= Number(filters.minPrice));
     }
@@ -28,6 +33,7 @@ function HomePage() {
       result = result.filter((p) => p.price <= Number(filters.maxPrice));
     }
 
+    // Filter by number of bedrooms
     if (filters.minBeds) {
       result = result.filter((p) => p.bedrooms >= Number(filters.minBeds));
     }
@@ -36,12 +42,14 @@ function HomePage() {
       result = result.filter((p) => p.bedrooms <= Number(filters.maxBeds));
     }
 
+    // Filter by postcode
     if (filters.postcode) {
       result = result.filter((p) =>
         p.location.toLowerCase().includes(filters.postcode.toLowerCase())
       );
     }
 
+    // Filter by date added
     if (filters.dateFrom) {
       result = result.filter(
         (p) => new Date(p.dateAdded) >= new Date(filters.dateFrom)
