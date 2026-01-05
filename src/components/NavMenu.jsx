@@ -69,7 +69,10 @@ function NavMenu() {
                 </div>
             </div>
 
-            <Link to="/signin" className="sign-in-btn">Sign in</Link>
+            <Link to="/signin" className="sign-in-btn" style={{ position: "relative", zIndex: 10}}
+            >
+                Sign in
+            </Link>
         </nav>
     );
 }

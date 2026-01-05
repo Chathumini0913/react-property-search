@@ -80,16 +80,18 @@ function HomePage() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            width: "100%"
           }}
         >
           {/* Sign-in box */}
           <div
             className="signin-box"
-            style={{ width: "100%", maxWidth: "700px", marginBottom: "20px" }}
+            style={{ width: "100%", maxWidth: "700px", margin: "25px auto 40px" , textAlign:"center", zIndex:10, position: "relative",}}
           >
             <strong>Sign in to streamline your search</strong>
             <p>Save properties, create alerts and keep track of enquiries.</p>
-            <button className="continue-btn" onClick={goToSignIn}>
+            <button className="continue-btn" onClick={() => navigate("/signin")}
+            >
               Sign in or create an account
             </button>
           </div>
@@ -130,7 +132,12 @@ function HomePage() {
             }}
           >
             <h2>Your Favourites</h2>
-            <button onClick={clearFavourites}>Clear All</button>
+            <button 
+              className="clear-favourites-btn" 
+              onClick={clearFavourites}
+            >
+              Clear All
+            </button>
           </div>
 
           {favourites.length === 0 && <p>No favourites yet.</p>}
