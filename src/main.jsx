@@ -6,6 +6,7 @@ import './styles/App.css';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    {/* HashRouter used for routing in a static site environment */}
     <HashRouter>
       <App />
     </HashRouter>

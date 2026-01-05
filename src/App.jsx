@@ -10,15 +10,19 @@ import { FavouritesProvider } from "./context/FavouritesContext";
 function App() { 
   return (
     <>
-      
+    {/* Provide global favourites context to the entire app */}  
     <FavouritesProvider>
+      {/* Header displayed on all pages */}
       <Header />
+      {/* Route definitions */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/property/:id" element={<PropertyPage />} />
       </Routes>
+
+      {/* Footer displayed on all pages */}
       <Footer />
     </FavouritesProvider>
     </>
