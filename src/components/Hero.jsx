@@ -1,17 +1,21 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+// Main search area on homepage
 function Hero() {
+    // State to track selected mode: buy, rent, sold
     const [mode, setMode] = useState("buy");
     const [query, setQuery] = useState("");
     const navigate = useNavigate();
 
+    // Return descriptive text based on selected mode
     const getModeText = () => {
         if (mode === "buy") return "Search properties to buy";
         if (mode === "rent") return "Search properties to rent";
         return "Search sold house prices";
     };
 
+    // Handle search button click or Enter key
     const handleSearch = () => {
         const params = new URLSearchParams({
             mode,

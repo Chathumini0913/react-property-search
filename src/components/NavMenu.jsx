@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 
+// Navigation menu with dropdown for Buy, Rent , House Prices, and Find Agent
 function NavMenu() {
     const [openMenu, setOpenMenu] = useState(null);
     const navRef = useRef(null);
 
+    // Toggle dropdown visibility
     const toggleMenu = (menu) => {
         setOpenMenu(openMenu === menu ? null : menu);
     };

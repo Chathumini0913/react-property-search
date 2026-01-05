@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { FavouritesContext } from "../context/FavouritesContext";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 
+// Display property info in search results
 function PropertyCard({ property }) {
   const { addFavourite, favourites, removeFavourite } = useContext(FavouritesContext);
 
+  // Check if the property is already a favourite
   const isFavourite = favourites.some((p) => p.id === property.id);
 
   return (

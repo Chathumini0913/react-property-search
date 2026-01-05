@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import NavMenu from "./NavMenu";
 
+// Header component with website logo and navigation menu
 function Header() {
   return (
     <header className="navbar">

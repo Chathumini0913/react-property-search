@@ -793,3 +793,74 @@ h1 {
 .clear-favourites-btn:hover {
     background: #f4f4f4;
 }
+
+/* Tablet / iPad landscape responsiveness */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-toggle {
+        flex-wrap: wrap;
+        gap: 4px;
+        max-width: 400px;
+    }
+
+    .hero-search {
+        max-width: 90%;
+    }
+
+    .hero-search input {
+        padding: 14px 16px;
+        font-size: 0.95rem;
+    }
+
+    .hero-search button {
+        padding: 14px 30px;
+        font-size: 0.95rem;
+    }
+
+    .results-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 14px;
+    }
+
+    .property-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 14px;
+    }
+
+    .sticky-favourites {
+        width: 280px;
+        max-width: 90%;
+        top: 80px;
+    }
+
+    .rm-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .rm-search-box {
+        padding: 20px;
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px;
+    }
+
+    .gallery-main {
+        max-width: 600px;
+    }
+}
+

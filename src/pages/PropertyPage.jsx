@@ -28,7 +28,7 @@ function PropertyPage() {
           <Tab>Google Map</Tab>
         </TabList>
 
-        <TabPanel>
+        <TabPanel style={{ marginTop: "20px", lineHeight: "1.6" , fontSize: "1rem" }}>
           <p>{property.longDescription}</p>
         </TabPanel>
         <TabPanel>
@@ -38,7 +38,7 @@ function PropertyPage() {
             className="floorplan-image"
           />
         </TabPanel>
-        <TabPanel>
+        <TabPanel style={{ marginTop: "200px"}}>
           <iframe
             title="Property Map"
             width="100%"
